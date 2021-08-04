@@ -1,13 +1,133 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Arial;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app{
+  background-image: url('assets/cold-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.3s ease-out;
+}
+
+
+.app.warm{
+  background-image: url('assets/warm-bg.jpg');
+}
+
+main{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
+}
+
+.search-box{
+  width: 100%;
+  margin: 0 0 75px;
+  display: flex;
+}
+.search-bar{
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  font-size: 20px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 0 0 16px 16px;
+
+  box-shadow: 0 5px rgba(0,0,0,0.2);
+
+  transition: 0.3s ease;
+}
+
+/* .search-box ion-icon{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 27px;
+  color: #ddd;
+  background-color: rgb(117, 117, 117, 0.4);
+  width: 33px;
+  height: 33px;
+  margin: 0;
+  padding: 5px 5px;
+  border-radius: 0 0 16px 0;
+} */
+
+.search-bar:focus{
+  background-color: rgba(255,255,255,0.7);
+}
+
+
+.location{
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 50, 0.5);
+}
+.date{
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  margin: 15px 0 0;
+}
+
+
+.weather-box{
+  text-align: center;
+}
+
+.temp{
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: 6px 6px rgba(0,0,0,0.2);
+
+  font-size: 80px;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 4px 4px rgba(0,0,0,0.2);
+}
+.weather{
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+.error{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 28px;
+  color: #ddd;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 1200px){
+  .app{
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .app.warm{
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .search-box{
+    width: 350px;
+    margin: 0 auto 75px;
+  }
+  .error{
+    width: 300px
+  }
 }
